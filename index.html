@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>ReHyTech</title>
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="section-container header-container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="./Imagenes/ReHyTechB.png" alt="LogoB">
+            </div>
+            <nav class="navbar">
+                <label for="toggle-menu"> <i class="fa-solid fa-bars"></i> </label>
+                <input type="checkbox" id="toggle-menu">
+                <ul class="navbar-list">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#about-us">Acerca</a></li>
+                    <li><a href="#evento">Eventos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li class="cubo"><a href="./Login.html">Iniciar sesión</a></li>
+                    <li class="cubo"><a href="./Register.html">Regístrate</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <!-- hero -->
+    <div class="hero-image" id="hero">
+        <div class="hero-container">
+            <div class="text-container">
+                <h1>Bienvenidos a ReHyTech Argentina</h1>
+                <p>Eventos sobre fiestas electronicas</p>
+            </div>
+            <button class="info"><a href="#"></a> Más Información</button>
+        </div>
+    </div>
+
+    <!-- acerca -->
+    <div class="section-container about-us-container">
+        <section class="section" id="about-us">
+            <div class="about-us-content">
+                <h2 class="section-tittle">¿Quienes somos?</h2>
+                <p class="section-p">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla velit cupiditate iste vero quam alias
+                    officiis,
+                    fugiat deleniti quidem tenetur non fugit sequi, aliquam culpa totam sed molestiae soluta esse.</p>
+            </div>
+            <div class="about-img"></div>
+        </section>
+    </div>
+
+    <!--eventos-->
+
+    <div class="section-container evento-container">
+        <section>
+            <div class="section">
+                <div class="evento" id="evento">
+                    <h2 class="title-evento">Eventos</h2>
+                </div>
+            </div>
+
+            <div class="evento-card">
+
+                <div class="card">
+                    <div class="card-tamaño img-card-1"></div>
+                    <h2 class="card-title">Miss Monique</h2>
+                    <button class="boton"><a href="#">Comprar Ticket</a></button>
+                </div>
+
+                <div class="card">
+                    <div class="card-tamaño img-card-2"></div>
+                    <h2 class="card-title">Boris Brejcha</h2>
+                    <button class="boton"><a href="#">Comprar Ticket</a></button>
+                </div>
+
+                <div class="card">
+                    <div class="card-tamaño img-card-3"></div>
+                    <h2 class="card-title">Carl Cox</h2>
+                    <button class="boton"><a href="#">Comprar Ticket</a></button>
+                </div>
+
+                <div class="card">
+                    <div class="card-tamaño img-card-4"></div>
+                    <h2 class="card-title">Marshmello</h2>
+                    <button class="boton"><a href="#">Comprar Ticket</a></button>
+                </div>
+
+                <div class="card">
+                    <div class="card-tamaño img-card-5"></div>
+                    <h2 class="card-title">Steve Aoki</h2>
+                    <button class="boton"><a href="#">Comprar Ticket</a></button>
+                </div>
+
+                <div class="card">
+                    <div class="card-tamaño img-card-6"></div>
+                    <h2 class="card-title">Korolova</h2>
+                    <button class="boton"><a href="#">Comprar Ticket</a></button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contacto -->
+
+    <div class="section-container contacto-container contacto-center" id="contacto">
+        <section class="contacto-section">
+
+            <div class="contacto-info">
+                <div><i class="fas fa-map-marker-alt"></i>Av 25 de Mayo, C.Savedra 420, Buenos Aires</div>
+                <div><i class="fas fa-envelope"></i>Contacto@Contacto.com</div>
+                <div><i class="fas fa-phone"></i>23249510241</div>
+                <div><i class="fas fa-clock"></i>Lun - Sab 9:00 AM a 20:00 PM</div>
+            </div>
+
+            <div class="contacto-form">
+                <h2>Contacto</h2>
+                <form class="contacto" action="" method="post">
+                    <input type="text" name="nombre" class="contacto-text" placeholder="Nombre">
+                    <input type="email" name="email" class="contacto-text" placeholder="Email">
+                    <textarea name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+                    <input type="submit" name="enviar" class="enviar-mensaje" value="Enviar">
+                </form>
+            </div>
+
+        </section>
+    </div>
+    
+    <!-- footer -->
+    <section class="footer">
+        <p> ©ReHyKTech. Todos los derechos reservados</p>
+    </section>
+</body>

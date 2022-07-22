@@ -1,0 +1,697 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url(./fonts/Rubik-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'ITC';
+    src: url(./fonts/ITCAvantGardeStd-BoldObl.ttf);
+}
+
+@font-face {
+    font-family: 'batman';
+    src: url(./fonts/batmfa__.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Rubik", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    background-color: black;
+}
+
+body {
+    width: 100%;
+    color: white;
+}
+
+:root {
+    --black: #131415;
+    --grey: #242121;
+    --pink: #FFCFC4;
+    --white: #FFFFFF;
+    --blue: #161C72;
+    --optional: #353B40;
+    --optional-2: #002D38;
+}
+
+.section-container {
+    background-color: var(--black);
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px;
+    width: 95%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+button {
+    background-color: var(--black);
+    border: 0px solid black;
+    outline: none;
+    width: 180px;
+    height: 40px;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--optional);
+    transition: all 0.4s ease-in;
+}
+
+/*header*/
+
+.header-container {
+    position: sticky;
+    top: 0%;
+    z-index: 9999;
+}
+
+.header {
+    margin: 0 auto;
+    max-width: 1300px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px 0px 50px;
+}
+
+.logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar,
+.navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-list {
+    gap: 35px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 15px;
+}
+
+.cubo {
+    border: 1px solid white;
+    font: 14px;
+    padding: 8px 25px;
+    border-radius: 3px;
+    transition: all 0.3s linear;
+}
+
+.cubo:hover {
+    background-color: var(--blue);
+    color: var(--blue);
+    transition: all 0.3s linear;
+    font-weight: 700;
+}
+
+.navbar i {
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#toggle-menu {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .header {
+        padding: 0px 50px 0px 10px;
+    }
+    .navbar i {
+        display: flex;
+    }
+    .navbar-list {
+        position: absolute;
+        background-color: var(--black);
+        flex-direction: column;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 100px);
+        z-index: 9999;
+        display: none;
+    }
+
+    #toggle-menu:checked + .navbar-list {
+        display: flex;
+    }
+}
+
+/*hero*/
+
+.hero-image {
+    position: relative;
+    background: url(./Imagenes/arbol.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 550px;
+    overflow: hidden;
+}
+
+.hero-container {
+    margin-top: 210px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+
+.text-container {
+    max-width: max(40%), 300px;
+}
+
+.text-container h1 {
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.text-container p {
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* acerca */
+
+#about-us {
+    background-color: var(--black);
+    gap: 15%;
+    flex-wrap: wrap;
+}
+
+.about-img {
+    background-image: url(./Imagenes/Dj.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    max-width: 650px;
+    flex: 1 1 500px;
+}
+
+.about-us-content {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    flex: 1 1 400px;
+    gap: 20px;
+}
+
+.section-tittle {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.section-p {
+     font-size: 15px;
+     font-weight: 400;
+}
+
+/* Eventos section */
+
+.evento-container {
+    background-color: #002D38;
+}
+
+#eventos {
+    flex-direction: column;
+    gap: max(120px, 10%);
+}
+
+.title-evento {
+    background-color: var(--optional-2);
+    -webkit-transition: font-size 1s ease;
+    transition: font-size 1s ease;
+    font-family: 'batman';
+}
+
+.title-evento:hover {
+    font-size: 50px;
+}
+
+.evento-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15%;
+}
+
+.card {
+    background: var(--black);
+    width: 300px;
+    height: 420px;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+.card-tamaño {
+    height: 280px;
+    margin-bottom: 18px;
+    background-size: cover;
+    border-radius: 5px 5px 0 0;
+    border: solid var(--white) 2px;
+}
+
+.img-card-1 {
+    background-image: url(./Imagenes/missmonique2.png);
+}
+
+.img-card-2 {
+    background-image: url(./Imagenes/Boris.png);
+}
+
+.img-card-3 {
+    background-image: url(./Imagenes/carlcox.png);
+}
+
+.img-card-4 {
+    background-image: url(./Imagenes/mashmellow2.png);
+}
+
+.img-card-5 {
+    background-image: url(./Imagenes/SteveAoki.png);
+}
+
+.img-card-6 {
+    background-image: url(./Imagenes/korolova.png);
+}
+
+.card-title {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton {
+    background-color: var(--optional-2);
+    margin: 35px 50px;
+    width: 200px;
+}
+
+.boton a {
+    color: var(--white);
+}
+
+/* contacto */
+
+.contacto-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacto-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacto-info {
+    color: var(--pink);
+    max-width: 500px;
+    line-height: 35px;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+.contacto-info i {
+    color: var(--blue);
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.contacto-form {
+    max-width: 700px;
+    margin-right: 50px;
+}
+
+.contacto-info, .contacto-form {
+    flex: 1;
+}
+
+.contacto-form h2 {
+    color: var(--pink);
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.contacto-form .contacto-text {
+    background-color: var(--optional-2);
+    color: var(--white);
+    border: none;
+    width: calc(50%-10px);
+    height: 50px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.contacto-form .contacto-text:first-child {
+    margin-right: 15px;
+}
+
+.contacto-form textarea {
+    background-color: var(--optional-2);
+    color: var(--white);
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.enviar-mensaje {
+    width: 50%;
+    height: 50px;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+@media (max-width: 950px){
+    .contacto-section{
+        flex-direction: column;
+    }
+
+    .contacto-info, .contacto-form{
+        margin: 30px 50px;
+        width: 100%;
+    }
+    
+    .contacto-form h2{
+        font-size: 30px;
+    }
+
+    .contacto-form .contacto-text{
+        width: 100%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 459px){
+    .contacto-section{
+        flex-direction: column;
+    }
+
+    .contacto-info, .contacto-form{
+        margin: 30px 50px;
+        font-size: 70%;
+        width: 100%;
+    }
+    
+    .contacto-form h2{
+        font-size: 30px;
+    }
+
+    .contacto-form .contacto-text{
+        width: 100%;
+    }
+}
+
+/* Login */
+
+body {
+    background-image: url(./imagenes/disco.jpg);
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.container-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.281);
+    backdrop-filter: blur(1.5px);
+    width: 28%;
+    height: 600px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    font-size: 2.5em;
+    color: white;
+    font-family: 'batman';
+    margin-top: 60px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 70px;
+}
+
+input {
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    width: 40%;
+    height: 45px;
+    border-radius: 25px;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 13px;
+    font-family: 'rubik';
+}
+
+.pass {
+    font-size: 0.8em;
+    color: white;
+    cursor: pointer;
+    font-family: 'batman';
+    text-decoration: underline;
+}
+
+.pass:hover {
+    color: #002D38;
+}
+
+.ingresar {
+    background-color: rgba(0, 0, 0, 0.281);
+    color: white;
+    height: 50px;
+    width: 40%;
+    border-radius: 25px;
+    border: none;
+    margin: 10px;
+    font-family: 'batman';
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+label {
+    font-size: 25px;
+    color: white;
+    font-family: 'batman';
+}
+
+.placeholder {
+    text-align: center;
+}
+
+.registrarse {
+    font-size: 0.8em;
+    color: white;
+    font-family: 'batman';
+}
+
+.registrarse a:hover {
+    color: #002D38;
+}
+
+.registrarse a{
+    font-family: 'batman';
+    color: var(--white);
+    text-decoration: underline;
+}
+
+@media (max-width: 1440px) and (min-width: 800px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 799px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/* Register */
+
+body {
+    background-image: url(./imagenes/disco.jpg);
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.container-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.281);
+    backdrop-filter: blur(1.5px);
+    width: 28%;
+    height: 600px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 2em;
+    color: white;
+    font-family: 'batman';
+    margin-top: 20px
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.tamaño {
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    width: 40%;
+    height: 45px;
+    border-radius: 25px;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 13px;
+    font-family: 'rubik';
+}
+
+.ingresars {
+    background-color: rgba(0, 0, 0, 0.281);
+    color: white;
+    height: 50px;
+    width: 40%;
+    border-radius: 25px;
+    border: none;
+    margin: 10px;
+    font-family: 'batman';
+    font-size: 1em;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+label {
+    font-size: 20px;
+    color: white;
+    font-family: 'batman';
+}
+
+.placeholder {
+    text-align: center;
+}
+
+.registrarses {
+    font-size: 0.8em;
+    color: white;
+    font-family: 'batman';
+}
+
+.registrarses a:hover {
+    color: #002D38;
+}
+
+.registrarses a{
+    font-family: 'batman';
+    color: var(--white);
+    text-decoration: underline;
+}
+
+@media (max-width: 1440px) and (min-width: 800px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 799px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+    .ingresar {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .tamaño {
+        width: 33%;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    flex-wrap: wrap;
+}
