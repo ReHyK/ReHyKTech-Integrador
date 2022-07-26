@@ -447,7 +447,7 @@ button:hover {
 /* Login */
 
 body {
-    background-image: url(./imagenes/disco.jpg);
+    background-image: url(./imagenes/disco.png);
     margin: 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -569,7 +569,7 @@ label {
 /* Register */
 
 body {
-    background-image: url(./imagenes/disco.jpg);
+    background-image: url(./imagenes/disco.png);
     margin: 0;
     background-size: cover;
     background-repeat: no-repeat;
